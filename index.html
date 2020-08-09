@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <h3>Text to speech</h3>
+    <form onsubmit="play(); return false;">
+      <select name="language" id="language" class="m-tb-20" required="">
+        <option value="">Select a language...</option>
+      </select><br>
+      <textarea name="message" id="message" cols="30" rows="5" placeholder="Please type your text for speech..." required=""></textarea><br>
+      <button type="submit" class="m-tb-20">Play</button>
+      <audio id="audioPlayer" src="" autoplay="autoplay"></audio>
+    </form>
+    <script src="/src/dotenv.js"></script>
+    <script src="/src/Menu.js"></script>
+    <script src="/src/voicerss-tts.min.js"></script>
+    <script src="/src/script.js"></script>
+  </body>
+</html>
