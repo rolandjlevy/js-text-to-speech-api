@@ -81,6 +81,10 @@ form > * {
   margin-bottom: 20px;
 }
 
+form > button {
+  margin-bottom: 0;
+}
+
 .m-tb-20 {
   margin: 20px 0;
 }
