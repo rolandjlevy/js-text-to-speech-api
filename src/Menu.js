@@ -51,12 +51,14 @@ class Menu {
       'tr-tr': 'Turkish',
       'vi-vn': 'Vietnamese'
     }
+    this.selected = 'en-gb';
   }
   createOptions(language) {
     Object.entries(this.options).forEach(([key, value]) => {
       const option = document.createElement('option');
       option.value = key;
       option.textContent = value;
+      if (key === this.selected) option.selected = true;
       language.appendChild(option);
     });
   }

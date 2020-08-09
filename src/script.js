@@ -2,6 +2,8 @@
   const message = document.querySelector('#message');
   const language = document.querySelector('#language');
 
+  message.value = 'The quick brown fox jumps over the lazy dog';
+
   function play() {
     return VoiceRSS.speech({
       key: apiKey,
