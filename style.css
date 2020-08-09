@@ -1,3 +1,7 @@
+:root {
+  --dark-grey: #373d5e;
+}
+
 *, body {
   font-family: 'Open Sans', sans-serif;
 }
@@ -6,27 +10,41 @@ body {
   margin: 20px;
 }
 
+.pattern {
+  --alpha: 0.1;
+  background: radial-gradient(circle at 100% 50%, transparent 20%, rgba(255,255,255,var(--alpha)) 21%, rgba(255,255,255,var(--alpha)) 34%, transparent 35%, transparent),
+radial-gradient(circle at 0% 50%, transparent 20%, rgba(255,255,255,var(--alpha)) 21%, rgba(255,255,255,var(--alpha)) 34%, transparent 35%, transparent) 0 -50px;
+background-color: var(--dark-grey);
+background-size: 75px 100px;
+}
+
 textarea {
+  font-size: 1rem;
   padding: 10px;
   border: 0;
-  min-width: 150px
+  width: calc(100% - 20px)
+}
+
+select {
+  width: 100%;
 }
 
 select, button {
+  font-size: 1rem;
   padding: 5px 10px;
   border: 0;
 }
 
 button {
   cursor: pointer;
-  background-color: #737699;
+  background-color: var(--dark-grey);
   color: #fff;
   font-weight: 600;
   transition: all 0.2s ease;
 }
 
 button:hover {
-  background-color: #373a57;
+  background-color: #000;
   transition: all 0.2s ease;
 }
 
@@ -52,6 +70,7 @@ h1, h2, h3 {
 h3 {
   font-size: 1.75rem;
   margin: 0 0 20px 0;
+  font-weight: 700;
 }
 
 #audioPlayer {
@@ -68,4 +87,12 @@ form > * {
 
 .m-b-20 {
   margin-bottom: 20px;
+}
+
+.m-r-10 {
+  margin-right: 10px;
+}
+
+.m-l-10 {
+  margin-left: 10px;
 }

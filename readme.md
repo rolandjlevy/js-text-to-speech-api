@@ -6,5 +6,5 @@
 - [Githib repo](https://github.com/rolandjlevy/js-text-to-speech-api)
 
 ### Documentation
-- http://www.voicerss.org/api/
-- http://www.voicerss.org/sdk/javascript.aspx
+- Free API from [voicerss.org](http://www.voicerss.org/api/)
+- CSS background from [css3patterns](https://leaverou.github.io/css3patterns/)
