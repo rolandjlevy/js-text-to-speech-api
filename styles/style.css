@@ -1,5 +1,6 @@
 :root {
   --dark-grey: #373d5e;
+  --deep-grey: #1e223b;
 }
 
 *, body {
@@ -27,11 +28,11 @@ textarea {
 
 select {
   width: 100%;
+  padding: 5px 10px 10px 10px;
 }
 
 select, button {
   font-size: 1rem;
-  padding: 5px 10px;
   border: 0;
 }
 
@@ -41,6 +42,7 @@ button {
   color: #fff;
   font-weight: 600;
   transition: all 0.2s ease;
+  padding: 5px 10px;
 }
 
 button:hover {
@@ -59,8 +61,9 @@ button:hover {
 .container {
   background-color: #e4e6f0;
   padding: 30px;
-  border-radius: 3px;
-  box-shadow: 0 15px 15px -10px #373d5e;
+  border-radius: 5px;
+  box-shadow: 0 15px 15px -10px var(--deep-grey);
+  max-width: 360px;
 }
 
 h1, h2, h3 {
@@ -68,9 +71,13 @@ h1, h2, h3 {
 }
 
 h3 {
-  font-size: 1.75rem;
+  font-size: 2rem;
   margin: 0 0 20px 0;
   font-weight: 700;
+}
+
+h3 > * {
+  color: var(--deep-grey);
 }
 
 #audioPlayer {
@@ -83,6 +90,22 @@ form > * {
 
 form > button {
   margin-bottom: 0;
+  border-radius: 3px;
+}
+
+footer, footer > a {
+  color: #fff;
+}
+
+footer > a:hover {
+  text-decoration: none;
+}
+
+.new-tab-icon::after {
+  font-family: "Font Awesome 5 Free"; 
+  font-weight: 900; 
+  content: "\f35d";
+  margin-left: 5px;
 }
 
 .m-tb-20 {
@@ -99,4 +122,8 @@ form > button {
 
 .m-l-10 {
   margin-left: 10px;
+}
+
+.m-l-5 {
+  margin-left: 5px;
 }
