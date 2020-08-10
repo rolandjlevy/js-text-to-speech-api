@@ -53,7 +53,8 @@ class Menu {
     }
     this.selected = 'en-gb';
   }
-  createOptions(language) {
+  createOptions(language, emojiFlags) {
+    // console.log(emojiFlags);
     Object.entries(this.options).forEach(([key, value]) => {
       const option = document.createElement('option');
       option.value = key;

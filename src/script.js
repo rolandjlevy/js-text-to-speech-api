@@ -17,9 +17,13 @@
     });
   }
 
-  const menu = new Menu();
-  menu.createOptions(language);
-
+  (async () => {
+    let url = emojiFlagUrl;
+    const response = await fetch(emojiFlagUrl);
+    const emojiFlags = await response.json();
+    const menu = new Menu();
+    menu.createOptions(language, emojiFlags);
+  })();
 
   // const url = `https://api.unsplash.com/photos/random?client_id=${key}&w=300`;
 
