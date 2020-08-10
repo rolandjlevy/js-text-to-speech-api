@@ -8,3 +8,4 @@
 ### Documentation
 - Free API from [voicerss.org](http://www.voicerss.org/api/)
 - CSS background from [css3patterns](https://leaverou.github.io/css3patterns/)
+- Emoji flags data from [jsdelivr.com](https://www.jsdelivr.com/package/npm/emoji-flags)
