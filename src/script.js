@@ -1,11 +1,15 @@
+const message = document.querySelector('#message');
+const language = document.querySelector('#language');
+const btn = document.querySelector('.btn');
+const form = document.querySelector('form');
 
-  const message = document.querySelector('#message');
-  const language = document.querySelector('#language');
+message.value = 'The quick brown fox jumps over the lazy dog';
 
-  message.value = 'The quick brown fox jumps over the lazy dog';
+console.log('loaded...');
 
-  function speak() {
-    return VoiceRSS.speech({
+function doPromise(){
+  return new Promise((resolve, reject) => {
+    const vrss = VoiceRSS.speech({
       key: apiKey,
       src: message.value,
       hl: language.value,
@@ -15,12 +19,49 @@
       f: '44khz_16bit_stereo',
       ssml: false
     });
-  }
-  
-  (async () => {
-    let url = emojiFlagUrl;
-    const response = await fetch(emojiFlagUrl);
-    const emojiFlags = await response.json();
-    const menu = new Menu(emojiFlags);
-    menu.createOptions(language);
-  })();
+    if (vrss) {
+      resolve(vrss);
+    } else {
+      reject('no VoiceRSS found');
+    }
+  });
+}
+
+// function speak() {
+//   return VoiceRSS.speech({
+//     key: apiKey,
+//     src: message.value,
+//     hl: language.value,
+//     v: 'Amy',
+//     r: 0, 
+//     c: 'mp3',
+//     f: '44khz_16bit_stereo',
+//     ssml: false
+//   });
+// }
+
+function speak() {
+  return doPromise()
+    .then(result => {
+      console.log(result);
+      return result;
+    })
+    .catch(error => {
+      console.error(error);
+  });
+}
+
+(async () => {
+  let url = emojiFlagUrl;
+  const response = await fetch(emojiFlagUrl);
+  const emojiFlags = await response.json();
+  const menu = new Menu(emojiFlags);
+  menu.createOptions(language);
+})();
+
+// (() => {
+//   setTimeout(() => {
+//     doPromise();
+//   }, 3000);
+// })();
+
