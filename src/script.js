@@ -2,15 +2,7 @@
   const message = document.querySelector('#message');
   const language = document.querySelector('#language');
 
-  // message.value = 'The quick brown fox jumps over the lazy dog';
-
-  (async () => {
-    let url = emojiFlagUrl;
-    const response = await fetch(emojiFlagUrl);
-    const emojiFlags = await response.json();
-    const menu = new Menu(emojiFlags);
-    menu.createOptions(language);
-  })();
+  message.value = 'The quick brown fox jumps over the lazy dog';
 
   function speak() {
     return VoiceRSS.speech({
@@ -24,3 +16,11 @@
       ssml: false
     });
   }
+  
+  (async () => {
+    let url = emojiFlagUrl;
+    const response = await fetch(emojiFlagUrl);
+    const emojiFlags = await response.json();
+    const menu = new Menu(emojiFlags);
+    menu.createOptions(language);
+  })();

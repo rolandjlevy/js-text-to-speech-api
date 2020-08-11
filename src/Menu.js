@@ -77,6 +77,5 @@ class Menu {
       if (item.lang === this.selected) option.selected = true;
       language.appendChild(option);
     });
-    console.log( this.optionsFlags.length)
   }
 }
