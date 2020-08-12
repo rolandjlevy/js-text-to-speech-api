@@ -47,8 +47,9 @@ function speak() {
 })();
 
 // (() => {
-//   setTimeout(() => {
-//     doPromise();
-//   }, 3000);
+  // setTimeout(() => {
+    // speak();
+    // return false;
+  // }, 3000);
 // })();
 
