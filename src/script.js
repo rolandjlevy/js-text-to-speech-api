@@ -27,19 +27,6 @@ function doPromise(){
   });
 }
 
-// function speak() {
-//   return VoiceRSS.speech({
-//     key: apiKey,
-//     src: message.value,
-//     hl: language.value,
-//     v: 'Amy',
-//     r: 0, 
-//     c: 'mp3',
-//     f: '44khz_16bit_stereo',
-//     ssml: false
-//   });
-// }
-
 function speak() {
   return doPromise()
     .then(result => {
