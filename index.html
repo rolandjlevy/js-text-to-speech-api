@@ -7,12 +7,13 @@
     <link href="styles/style.css" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;800&family=Raleway:wght@500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <script async src="/src/voicerss-tts.min.js"></script>
   </head>
   <body class="pattern">
     <main class="wrapper">
       <section class="container">
         <h3><span class="m-r-10">Text to speech API</span><i class="fas fa-comment-dots"></i></h3>
-        <p>Choose one of the 49 languages, type some text in the chosen language and hear it spoken</p>
+        <p>Choose one of 49 languages, type some text in the chosen language and hear it spoken</p>
         <form onsubmit="speak(); return false;">
           <select name="language" id="language" required="">
             <option value="">Select a language...</option>
@@ -27,7 +28,6 @@
 
     <script src="/src/dotenv.js"></script>
     <script src="/src/Menu.js"></script>
-    <script src="/src/voicerss-tts.min.js"></script>
     <script src="/src/script.js"></script>
 
   </body>

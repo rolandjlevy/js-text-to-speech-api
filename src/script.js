@@ -30,7 +30,7 @@ function doPromise(){
 function speak() {
   return doPromise()
     .then(result => {
-      console.log(result);
+      console.log({result});
       return result;
     })
     .catch(error => {
@@ -46,10 +46,7 @@ function speak() {
   menu.createOptions(language);
 })();
 
-// (() => {
-  // setTimeout(() => {
-    // speak();
-    // return false;
-  // }, 3000);
-// })();
+(() => {
+  // speak();
+})()
 
