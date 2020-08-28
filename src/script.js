@@ -4,6 +4,7 @@ const btn = document.querySelector('.btn');
 const form = document.querySelector('form');
 
 message.value = 'The quick brown fox jumps over the lazy dog';
+message.focus();
 
 console.log('loaded...');
 
