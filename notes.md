@@ -1,3 +1,8 @@
+### features list
+
+- includes emoji flags
+- Utilizes Text to Speech API
+
 # NOTES
 
 ### Reference
