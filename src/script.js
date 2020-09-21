@@ -11,7 +11,7 @@ console.log('loaded...');
 function doPromise(){
   return new Promise((resolve, reject) => {
     const vrss = VoiceRSS.speech({
-      key: apiKey,
+      key: k,
       src: message.value,
       hl: language.value,
       v: 'Amy',
