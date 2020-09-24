@@ -1,9 +1,12 @@
 const message = document.querySelector('#message');
 const language = document.querySelector('#language');
+const speachForm = document.querySelector('#speach-form');
 const btn = document.querySelector('.btn');
 const form = document.querySelector('form');
+const baseUrl = 'https://api.voicerss.org';
+const emojiFlagUrl = 'https://cdn.jsdelivr.net/npm/emoji-flags@1.3.0/data.json';
 
-message.value = 'The quick brown fox jumps over the lazy dog';
+message.value = '';
 message.focus();
 
 console.log('loaded...');
@@ -11,7 +14,7 @@ console.log('loaded...');
 function doPromise(){
   return new Promise((resolve, reject) => {
     const vrss = VoiceRSS.speech({
-      key: k,
+      key: str,
       src: message.value,
       hl: language.value,
       v: 'Amy',
@@ -30,10 +33,7 @@ function doPromise(){
 
 function speak() {
   return doPromise()
-    .then(result => {
-      console.log({result});
-      return result;
-    })
+    .then(result => result)
     .catch(error => {
       console.error(error);
   });
@@ -47,7 +47,4 @@ function speak() {
   menu.createOptions(language);
 })();
 
-(() => {
-  // speak();
-})()
 
