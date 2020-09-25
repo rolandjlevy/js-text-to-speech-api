@@ -2,6 +2,9 @@ class Menu {
   constructor(emojiFlags) {
     this.emojiFlags = emojiFlags;
     this.selected = 'en-gb';
+    this.initOptionsFlags();
+  }
+  initOptionsFlags() {
     this.optionsFlags = [
       { lang:'ar-eg', code:'EG', label:'Arabic (Egypt)' },
       { lang:'ar-sa', code:'SA', label:'Arabic (Saudi Arabia)' },

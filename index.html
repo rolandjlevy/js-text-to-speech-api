@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>Text to speech API</title>
+    <title>Text to speech 💬</title>
     <link href="styles/style.css" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;800&family=Raleway:wght@500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
@@ -12,23 +12,37 @@
   <body class="pattern">
     <main class="wrapper">
       <section class="container">
-        <h3><span class="m-r-10">Text to speech API</span><i class="fas fa-comment-dots"></i></h3>
+        <h3><span class="m-r-10">Text to speech</span><i class="fas fa-comment-dots"></i></h3>
         <p>Choose one of 49 languages, type some text in the chosen language and hear it spoken with the correct accent</p>
         <form onsubmit="speak(); return false;" id="speak-form">
-          <select name="language" id="language" required="">
+          <select name="language" id="language" class="m-b-20" required="">
             <option value="">Select a language...</option>
           </select>
-          <textarea name="message" id="message" cols="30" rows="5" placeholder="Please type the text you want to speak..." required=""></textarea>
-          <button type="submit" class="btn">Speak<i class="fas fa-play-circle m-l-5"></i></button>
+          <textarea name="message" id="message" class="m-b-10" cols="30" rows="5" placeholder="Please type the text you want to speak..." required=""></textarea>
+          <p class="m-tb-10">
+            <span class="m-r-10">Presets:</span>
+            <label for="rd-1">🇫🇷</label>
+            <input type="radio" name="preset" class="preset" value="FR" id="rd-1">
+            <label for="rd-2">🇷🇺</label>
+            <input type="radio" name="preset" class="preset" value="RU" id="rd-2">
+            <label for="rd-3">🇯🇵</label>
+            <input type="radio" name="preset" class="preset" value="JP" id="rd-3">
+            <label for="rd-4">🇸🇪</label>
+            <input type="radio" name="preset" class="preset" value="SE" id="rd-4">
+            <label for="rd-5">🇹🇷</label>
+            <input type="radio" name="preset" class="preset" value="TR" id="rd-5">
+          </p>
+          <button type="submit" class="btn m-t-10">Speak<i class="fas fa-play-circle m-l-5"></i></button>
           <audio id="audioPlayer" src="" autoplay="autoplay"></audio>
         </form>
       </section> 
       <footer class="m-tb-20">&copy; Roland Levy 2020 <a href="https://rolandlevy.co.uk" class="new-tab-icon" target="_blank">see more of my projects</a></footer>
     </main>
 
-    <script src="/src/test.js"></script>
-    <script src="/src/Menu.js"></script>
-    <script src="/src/script.js"></script>
+    <script src="/src/test.js" defer></script>
+    <script src="/src/Menu.js" defer></script>
+    <script src="/src/Presets.js" defer></script>
+    <script src="/src/script.js" defer></script>
 
   </body>
 </html>

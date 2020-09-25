@@ -1,20 +1,20 @@
+
 const message = document.querySelector('#message');
 const language = document.querySelector('#language');
 const speachForm = document.querySelector('#speach-form');
 const btn = document.querySelector('.btn');
 const form = document.querySelector('form');
+
 const baseUrl = 'https://api.voicerss.org';
 const emojiFlagUrl = 'https://cdn.jsdelivr.net/npm/emoji-flags@1.3.0/data.json';
 
 message.value = '';
 message.focus();
 
-console.log('loaded...');
-
 function doPromise(){
   return new Promise((resolve, reject) => {
     const vrss = VoiceRSS.speech({
-      key: str,
+      key,
       src: message.value,
       hl: language.value,
       v: 'Amy',
@@ -45,6 +45,5 @@ function speak() {
   const emojiFlags = await response.json();
   const menu = new Menu(emojiFlags);
   menu.createOptions(language);
+  const presets = new Presets(menu.optionsFlags, language, message);
 })();
-
-
