@@ -104,6 +104,10 @@ form label,  {
   cursor: pointer;
 }
 
+footer {
+  text-align: center;
+}
+
 footer, footer > a {
   color: #fff;
 }
