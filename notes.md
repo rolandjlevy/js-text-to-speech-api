@@ -19,3 +19,8 @@ https://en.wikiquote.org/wiki/Japanese_proverbs
 http://swedishforprofessionals.com/hilarious-swedish-idioms/
 - Turkish
 https://matadornetwork.com/abroad/30-awesome-turkish-expressions/
+
+### Reference
+- Free Text-to-Speech API from [voicerss.org](http://www.voicerss.org/api/)
+- Emoji flags data from [jsdelivr.com](https://www.jsdelivr.com/package/npm/emoji-flags)
+- CSS background from [css3patterns](https://leaverou.github.io/css3patterns/)
