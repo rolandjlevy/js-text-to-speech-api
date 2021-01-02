@@ -8,6 +8,8 @@ const form = document.querySelector('form');
 const baseUrl = 'https://api.voicerss.org';
 const emojiFlagUrl = 'https://cdn.jsdelivr.net/npm/emoji-flags@1.3.0/data.json';
 
+document.querySelector('#year').textContent = new Date().getFullYear(); 
+
 message.value = '';
 message.focus();
 
